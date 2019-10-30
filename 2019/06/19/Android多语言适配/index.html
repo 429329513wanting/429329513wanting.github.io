@@ -1,0 +1,767 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Android,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="不积跬步无以至千里" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="Android多语言适配">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android多语言适配">
+<meta property="og:url" content="http://yoursite.com/2019/06/19/Android多语言适配/index.html">
+<meta property="og:site_name" content="不积跬步无以至千里">
+<meta property="og:description" content="Android多语言适配">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-30T01:58:58.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android多语言适配">
+<meta name="twitter:description" content="Android多语言适配">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '2781135432',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/19/Android多语言适配/">
+
+
+  <title> Android多语言适配 | 不积跬步无以至千里 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+    <a href="https://github.com/429329513wanting" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">不积跬步无以至千里</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">ghwang的技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tag"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android多语言适配
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2019-06-19T10:18:53+08:00" content="2019-06-19">
+              2019-06-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Android多语言适配</p>
+<a id="more"></a>
+<h1 id="适配多语言主要就是两步"><a href="#适配多语言主要就是两步" class="headerlink" title="适配多语言主要就是两步"></a>适配多语言主要就是两步</h1><ul>
+<li>创建针对适配语言values文件夹,比如values-zh,values-en</li>
+<li>创建对应语言的Local</li>
+</ul>
+<h1 id="方便代码设置创建一个语言工具类-适配了Android7-0"><a href="#方便代码设置创建一个语言工具类-适配了Android7-0" class="headerlink" title="方便代码设置创建一个语言工具类,适配了Android7.0"></a>方便代码设置创建一个语言工具类,适配了Android7.0</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ChangeLanguageHelper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Context mContext = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String country = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CHANGE_LANGUAGE_CHINA = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CHANGE_LANGUAGE_ENGLISH = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CHANGE_LANGUAGE_DEFAULT = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String mLanguage = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Resources mResources;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Locale mDefaultLocale;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//mResources = context.getResources();</span></span><br><span class="line">        initResources(context);</span><br><span class="line">        country = context.getResources().getConfiguration().locale.getCountry();</span><br><span class="line"></span><br><span class="line">        mContext = context;</span><br><span class="line">        <span class="keyword">int</span> currentLanguage = SPUtils.getInstance().getInt(Constraint.APPLANGUAGE,<span class="number">0</span>);</span><br><span class="line">        changeLanguage(currentLanguage);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取当前字符串资源的内容</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getStringById</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        String string ;</span><br><span class="line">        <span class="keyword">if</span> (mLanguage != <span class="keyword">null</span> &amp;&amp; !<span class="string">""</span>.equals(mLanguage))&#123;</span><br><span class="line">            string = mResources.getString(id,mLanguage);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            string = mResources.getString(id,<span class="string">""</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (string != <span class="keyword">null</span> &amp;&amp; string.length() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> string;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">changeLanguage</span><span class="params">(<span class="keyword">int</span> language)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Configuration config = mResources.getConfiguration();     <span class="comment">// 获得设置对象</span></span><br><span class="line">        DisplayMetrics dm = mResources.getDisplayMetrics();</span><br><span class="line">        <span class="keyword">switch</span> (language) &#123;</span><br><span class="line">            <span class="keyword">case</span> CHANGE_LANGUAGE_CHINA:</span><br><span class="line">                config.locale = Locale.SIMPLIFIED_CHINESE;     <span class="comment">// 中文</span></span><br><span class="line">                config.setLayoutDirection(Locale.SIMPLIFIED_CHINESE);</span><br><span class="line">                mLanguage = <span class="string">"zh-CN"</span>;</span><br><span class="line">                country = <span class="string">"CN"</span>;</span><br><span class="line">                SPUtils.getInstance().put(Constraint.APPLANGUAGE,CHANGE_LANGUAGE_CHINA);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> CHANGE_LANGUAGE_ENGLISH:</span><br><span class="line">                config.locale = Locale.ENGLISH;   <span class="comment">// 英文</span></span><br><span class="line">                config.setLayoutDirection(Locale.ENGLISH);</span><br><span class="line">                mLanguage = <span class="string">"en"</span>;</span><br><span class="line">                country = <span class="string">"US"</span>;</span><br><span class="line">                SPUtils.getInstance().put(Constraint.APPLANGUAGE,CHANGE_LANGUAGE_ENGLISH);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> CHANGE_LANGUAGE_DEFAULT:</span><br><span class="line"></span><br><span class="line">                country = Locale.getDefault().getCountry();</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (<span class="string">"CN"</span>.equals(country))&#123;</span><br><span class="line">                    mDefaultLocale = Locale.SIMPLIFIED_CHINESE;</span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    mDefaultLocale =  Locale.ENGLISH;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                config.locale = mDefaultLocale;         <span class="comment">// 系统默认语言</span></span><br><span class="line">                config.setLayoutDirection(mDefaultLocale);</span><br><span class="line">                SPUtils.getInstance().put(Constraint.APPLANGUAGE,CHANGE_LANGUAGE_DEFAULT);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        mResources.updateConfiguration(config, dm);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.N) &#123;</span><br><span class="line"></span><br><span class="line">            LanguageUtils.applyChange(mContext);</span><br><span class="line">        &#125;</span><br><span class="line">        EventBus.getDefault().post(<span class="string">"languageChanged"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">initResources</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        mResources = context.getResources();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">getDefaultLanguage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="string">"CN"</span>.equals(country));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">LanguageUtils</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Locale <span class="title">getSetLocale</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> currentLanguage = SPUtils.getInstance().getInt(Constraint.APPLANGUAGE,<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">switch</span> (currentLanguage) &#123;</span><br><span class="line">                <span class="keyword">case</span> ChangeLanguageHelper.CHANGE_LANGUAGE_DEFAULT:</span><br><span class="line">                    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</span><br><span class="line">                        <span class="keyword">return</span> Resources.getSystem().getConfiguration().getLocales().get(<span class="number">0</span>);<span class="comment">//解决了获取系统默认错误的问题</span></span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="keyword">return</span> Locale.getDefault();</span><br><span class="line">                    &#125;</span><br><span class="line">                <span class="keyword">case</span> ChangeLanguageHelper.CHANGE_LANGUAGE_CHINA:</span><br><span class="line">                    <span class="keyword">return</span> Locale.CHINA;</span><br><span class="line">                <span class="keyword">case</span> ChangeLanguageHelper.CHANGE_LANGUAGE_ENGLISH:</span><br><span class="line">                    <span class="keyword">return</span> Locale.ENGLISH;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    <span class="keyword">return</span> Locale.CHINA;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@TargetApi</span>(Build.VERSION_CODES.N)</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Context <span class="title">wrapContext</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            Resources resources = context.getResources();</span><br><span class="line">            Locale locale = LanguageUtils.getSetLocale();</span><br><span class="line"></span><br><span class="line">            Configuration configuration = resources.getConfiguration();</span><br><span class="line">            configuration.setLocale(locale);</span><br><span class="line">            LocaleList localeList = <span class="keyword">new</span> LocaleList(locale);</span><br><span class="line">            LocaleList.setDefault(localeList);</span><br><span class="line">            configuration.setLocales(localeList);</span><br><span class="line">            <span class="keyword">return</span> context.createConfigurationContext(configuration);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">applyChange</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">            Resources res = context.getResources();</span><br><span class="line">            DisplayMetrics dm = res.getDisplayMetrics();</span><br><span class="line">            Configuration conf = res.getConfiguration();</span><br><span class="line"></span><br><span class="line">            Locale locale = getSetLocale();</span><br><span class="line">            <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</span><br><span class="line">                conf.setLocale(locale);</span><br><span class="line">                LocaleList localeList = <span class="keyword">new</span> LocaleList(locale);</span><br><span class="line">                LocaleList.setDefault(localeList);</span><br><span class="line">                conf.setLocales(localeList);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                conf.locale = locale;</span><br><span class="line">                <span class="keyword">try</span></span><br><span class="line">                &#123;</span><br><span class="line">                    conf.setLayoutDirection(locale);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">catch</span>(Exception e)</span><br><span class="line">                &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            res.updateConfiguration(conf, dm);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><h2 id="MyApplication"><a href="#MyApplication" class="headerlink" title="MyApplication"></a>MyApplication</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate();</span><br><span class="line">        </span><br><span class="line">    ...    </span><br><span class="line">    ChangeLanguageHelper.init(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="BaseActivity"><a href="#BaseActivity" class="headerlink" title="BaseActivity"></a>BaseActivity</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">attachBaseContext</span><span class="params">(Context newBase)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//多语言适配兼容7.0</span></span><br><span class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N)&#123;</span><br><span class="line">            <span class="keyword">super</span>.attachBaseContext(ChangeLanguageHelper.LanguageUtils.wrapContext(newBase));</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.attachBaseContext(newBase);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="手动切换语言"><a href="#手动切换语言" class="headerlink" title="手动切换语言"></a>手动切换语言</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ChangeLanguageHelper.changeLanguage(ChangeLanguageHelper.CHANGE_LANGUAGE_ENGLISH);</span><br></pre></td></tr></table></figure>
+
+<h1 id="代码设置"><a href="#代码设置" class="headerlink" title="代码设置"></a>代码设置</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameTv.setText(ChangeLanguageHelper.getStringById(R.string.login));</span><br></pre></td></tr></table></figure>
+
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>设置默认会随着系统语言改变;语言设置后监听eventbus，重新走界面生命周期;<br>工具类来源于<a href="https://blog.csdn.net/sinat_35721133/article/details/78327111" target="_blank" rel="noopener">点这里</a></p>
+<script src="/medium-image-plugin/lib.js"></script>
+      <link rel="stylesheet" href="/medium-image-plugin/lib.css">
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i>Android</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/31/kotlin嵌套类内部类/" rel="next" title="kotlin嵌套类内部类">
+                <i class="fa fa-chevron-left"></i> kotlin嵌套类内部类
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/4567519?s=400&u=e6c7f7845fb4e2c999ab51df004df94ba354367d&v=4" alt="monoshine">
+          <p class="site-author-name" itemprop="name">monoshine</p>
+          <p class="site-description motion-element" itemprop="description">风月无古今,情怀自深浅</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#适配多语言主要就是两步"><span class="nav-number">1.</span> <span class="nav-text">适配多语言主要就是两步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方便代码设置创建一个语言工具类-适配了Android7-0"><span class="nav-number">2.</span> <span class="nav-text">方便代码设置创建一个语言工具类,适配了Android7.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化"><span class="nav-number">3.</span> <span class="nav-text">初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MyApplication"><span class="nav-number">3.1.</span> <span class="nav-text">MyApplication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BaseActivity"><span class="nav-number">3.2.</span> <span class="nav-text">BaseActivity</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#手动切换语言"><span class="nav-number">4.</span> <span class="nav-text">手动切换语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码设置"><span class="nav-number">5.</span> <span class="nav-text">代码设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">6.</span> <span class="nav-text">说明</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">monoshine</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

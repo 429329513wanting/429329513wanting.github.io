@@ -1,0 +1,774 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Kotlin,数据库,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="不积跬步无以至千里" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="LitePal数据库使用方法">
+<meta name="keywords" content="Kotlin,数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LitePal数据库使用方法">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/LitePal数据库使用方法/index.html">
+<meta property="og:site_name" content="不积跬步无以至千里">
+<meta property="og:description" content="LitePal数据库使用方法">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/medium-image-plugin/thumbnailsundefined">
+<meta property="og:updated_time" content="2019-10-30T01:58:58.964Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LitePal数据库使用方法">
+<meta name="twitter:description" content="LitePal数据库使用方法">
+<meta name="twitter:image" content="http://yoursite.com/medium-image-plugin/thumbnailsundefined">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '2781135432',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/30/LitePal数据库使用方法/">
+
+
+  <title> LitePal数据库使用方法 | 不积跬步无以至千里 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+    <a href="https://github.com/429329513wanting" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">不积跬步无以至千里</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">ghwang的技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tag"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                LitePal数据库使用方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2019-05-30T13:57:51+08:00" content="2019-05-30">
+              2019-05-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><figure class="banner" style="width:undefinedpx; height:undefinedpx;margin: 0 auto;">
+      <img src="/medium-image-plugin/thumbnailsundefined" alt="litepal" class="img-small" data-large="/imgundefined">
+      </figure><br>LitePal数据库使用方法</p>
+<a id="more"></a>
+
+<p>#在assets文件夹下创建litepal.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;litepal&gt;</span><br><span class="line">    &lt;!--</span><br><span class="line">    	Define the database name of your application.</span><br><span class="line">    	By default each database name should be end with .db.</span><br><span class="line">    	If you didn&apos;t name your database end with .db,</span><br><span class="line">    	LitePal would plus the suffix automatically for you.</span><br><span class="line">    	For example:</span><br><span class="line">    	&lt;dbname value=&quot;demo&quot; /&gt;</span><br><span class="line">    --&gt;</span><br><span class="line">    &lt;dbname value=&quot;kotlin_demo&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--</span><br><span class="line">    	Define the version of your database. Each time you want</span><br><span class="line">    	to upgrade your database, the version tag would helps.</span><br><span class="line">    	Modify the models you defined in the mapping tag, and just</span><br><span class="line">    	make the version value plus one, the upgrade of database</span><br><span class="line">    	will be processed automatically without concern.</span><br><span class="line">			For example:</span><br><span class="line">    	&lt;version value=&quot;1&quot; /&gt;</span><br><span class="line">    --&gt;</span><br><span class="line">    &lt;version value=&quot;1&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--</span><br><span class="line">    	Define your models in the list with mapping tag, LitePal will</span><br><span class="line">    	create tables for each mapping class. The supported fields</span><br><span class="line">    	defined in models will be mapped into columns.</span><br><span class="line">    	For example:</span><br><span class="line">    	&lt;list&gt;</span><br><span class="line">    		&lt;mapping class=&quot;com.test.model.Reader&quot; /&gt;</span><br><span class="line">    		&lt;mapping class=&quot;com.test.model.Magazine&quot; /&gt;</span><br><span class="line">    	&lt;/list&gt;</span><br><span class="line">    --&gt;</span><br><span class="line">    &lt;list&gt;</span><br><span class="line">        &lt;mapping class=&quot;com.sendinfo.kotlindemo.Video&quot; /&gt;</span><br><span class="line">    &lt;/list&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--</span><br><span class="line">        Define where the .db file should be. &quot;internal&quot; means the .db file</span><br><span class="line">        will be stored in the database folder of internal storage which no</span><br><span class="line">        one can access. &quot;external&quot; means the .db file will be stored in the</span><br><span class="line">        path to the directory on the primary external storage device where</span><br><span class="line">        the application can place persistent files it owns which everyone</span><br><span class="line">        can access. &quot;internal&quot; will act as default.</span><br><span class="line">        For example:</span><br><span class="line">        &lt;storage value=&quot;external&quot; /&gt;</span><br><span class="line">    --&gt;</span><br><span class="line"></span><br><span class="line">&lt;/litepal&gt;</span><br><span class="line">说明：list节点下对应你的模型，会创建对应的表</span><br></pre></td></tr></table></figure>
+
+<h1 id="app-build-gradle"><a href="#app-build-gradle" class="headerlink" title="app build.gradle"></a>app build.gradle</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation &apos;org.litepal.android:kotlin:3.0.0&apos;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Application初始化"><a href="#Application初始化" class="headerlink" title="Application初始化"></a>Application初始化</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LitePal.initialize(this)</span><br><span class="line">//监听数据库升级</span><br><span class="line">LitePal.registerDatabaseListener(object :DatabaseListener&#123;</span><br><span class="line">    override fun onCreate() &#123;</span><br><span class="line"></span><br><span class="line">        L.d(&quot;数据库已经创建&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    override fun onUpgrade(oldVersion: Int, newVersion: Int) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="模型类继承LitePalSupport"><a href="#模型类继承LitePalSupport" class="headerlink" title="模型类继承LitePalSupport"></a>模型类继承LitePalSupport</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">data class Video(</span><br><span class="line"></span><br><span class="line">    var comment: String,</span><br><span class="line">    var down: String,</span><br><span class="line">    var forward: String,</span><br><span class="line">    var header: String,</span><br><span class="line">    var images: Any,</span><br><span class="line">    var name: String,</span><br><span class="line">    var passtime: String,</span><br><span class="line">    var sid: String,</span><br><span class="line">    var text: String,</span><br><span class="line">    var thumbnail: String,</span><br><span class="line">    var top_comments_content: Any,</span><br><span class="line">    var top_comments_header: Any,</span><br><span class="line">    var top_comments_name: Any,</span><br><span class="line">    var top_comments_uid: Any,</span><br><span class="line">    var top_comments_voiceuri: Any,</span><br><span class="line">    var type: String,</span><br><span class="line">    var uid: String,</span><br><span class="line">    var up: String,</span><br><span class="line">    var video: String</span><br><span class="line">):LitePalSupport()</span><br><span class="line">说明:</span><br><span class="line"> 1 id这个字段可写可不写，因为即使不写这个字段，LitePal也会在表中自动生成一个id列，毕竟每张表都一定要有主键的， 即不管实体类中有没有id这个属性，都会默认创建一个为整型的id字段，作为自增的主键。</span><br><span class="line"> id字段的值始终为当前记录的行号（下标从1开始），即使我们在实体类中定义了int或者long类型的id字段，在添加数据时人为的设置id的值为100,等其他值，查询数据库发现该id字段的值设置是无效的，她始终等于该条记录所在的行id，即第几条记录。</span><br><span class="line"> </span><br><span class="line">2 @Column(unique = true, defaultValue = &quot;unknown&quot;) 是唯一的，且默认值为unknown </span><br><span class="line">3 @Column(ignore = true) 忽略即是不在数据库中创建该属性对应的字段</span><br><span class="line">4 @Column(nullable = false) 不为空</span><br></pre></td></tr></table></figure>
+
+<h1 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//模拟网络返回数据</span><br><span class="line">val mm = JsonParser.fromJsonObj(HttpRequest.data,Result::class.javaObjectType)</span><br><span class="line">var list = JsonParser.fromJsonArr(JsonParser.toJsonString(mm.result),</span><br><span class="line">    Video::class.java)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//插入</span><br><span class="line">list.forEach &#123; it</span><br><span class="line"></span><br><span class="line">    it.saveOrUpdate(&quot;uid=?&quot;,it.uid)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//查询所有</span><br><span class="line">LitePal.findAll(Video::class.java).forEach &#123; it</span><br><span class="line"></span><br><span class="line">    L.d(it.name)</span><br><span class="line">&#125;</span><br><span class="line">//按照条件查询</span><br><span class="line">val alist  = LitePal.where(&quot;type = ?&quot;,&quot;video&quot;)</span><br><span class="line">    .order(&quot;uid&quot;)</span><br><span class="line">    .find&lt;Video&gt;()</span><br><span class="line">L.json(alist)</span><br></pre></td></tr></table></figure>
+
+<h1 id="更详细使用请点击这里"><a href="#更详细使用请点击这里" class="headerlink" title="更详细使用请点击这里"></a><a href="https://blog.csdn.net/gpf1320253667/article/details/82819795" target="_blank" rel="noopener">更详细使用请点击这里</a></h1><script src="/medium-image-plugin/lib.js"></script>
+      <link rel="stylesheet" href="/medium-image-plugin/lib.css">
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Kotlin/" rel="tag"><i class="fa fa-tag"></i>Kotlin</a>
+          
+            <a href="/tags/数据库/" rel="tag"><i class="fa fa-tag"></i>数据库</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/30/curl使用方法/" rel="next" title="curl使用方法">
+                <i class="fa fa-chevron-left"></i> curl使用方法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/31/kotlin嵌套类内部类/" rel="prev" title="kotlin嵌套类内部类">
+                kotlin嵌套类内部类 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/4567519?s=400&u=e6c7f7845fb4e2c999ab51df004df94ba354367d&v=4" alt="monoshine">
+          <p class="site-author-name" itemprop="name">monoshine</p>
+          <p class="site-description motion-element" itemprop="description">风月无古今,情怀自深浅</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#app-build-gradle"><span class="nav-number">1.</span> <span class="nav-text">app build.gradle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Application初始化"><span class="nav-number">2.</span> <span class="nav-text">Application初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型类继承LitePalSupport"><span class="nav-number">3.</span> <span class="nav-text">模型类继承LitePalSupport</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增删改查"><span class="nav-number">4.</span> <span class="nav-text">增删改查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更详细使用请点击这里"><span class="nav-number">5.</span> <span class="nav-text">更详细使用请点击这里</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">monoshine</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

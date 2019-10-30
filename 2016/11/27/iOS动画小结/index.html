@@ -1,0 +1,961 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="iOS,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="不积跬步无以至千里" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="动画总结">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS动画小结">
+<meta property="og:url" content="http://yoursite.com/2016/11/27/iOS动画小结/index.html">
+<meta property="og:site_name" content="不积跬步无以至千里">
+<meta property="og:description" content="动画总结">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-30T01:58:58.965Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS动画小结">
+<meta name="twitter:description" content="动画总结">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '2781135432',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/27/iOS动画小结/">
+
+
+  <title> iOS动画小结 | 不积跬步无以至千里 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+    <a href="https://github.com/429329513wanting" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">不积跬步无以至千里</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">ghwang的技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tag"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS动画小结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-27T14:04:06+08:00" content="2016-11-27">
+              2016-11-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="动画总结"><a href="#动画总结" class="headerlink" title="动画总结"></a>动画总结</h2><a id="more"></a>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在iOS开发中，如果遇到稍微复杂的交互，就不知道如何去实现这个效果，加上iOS动画又非常的庞杂，总是让你眼花缭乱。如果平时不注重总结和分类，到用的时候还真是不知道从哪里下手。所有今天把平时在项目中用的动画分类总结一下。</p>
+<h4 id="直接使用UIView封装好的动画"><a href="#直接使用UIView封装好的动画" class="headerlink" title="直接使用UIView封装好的动画"></a>直接使用UIView封装好的动画</h4><p>UIView 动画本质是对CoreAnimation的封装，因为它提供了简洁而且高效的接口。可以用来用作动画的属性有：</p>
+<ol>
+<li><strong>大小的变化（frame）</strong></li>
+<li><strong>拉伸的变化（bounds）</strong></li>
+<li><strong>中心位置（center）</strong></li>
+<li><strong>旋转（transform）</strong></li>
+<li><strong>透明度（alpha）</strong></li>
+<li><strong>背景颜色（backgroundcolor）</strong> </li>
+</ol>
+<p>这类动画平时在项目中用的是最多的，可以基本满足一般的动画效果。废话不多说直接贴一段最近项目中使用的一段代码，实现的效果很简单就是透明度的变化及背景变化。项目启动时调用此方法<br>    #pragma mark - 开始动画<br>    - (void)startAnimation{</p>
+<pre><code>UIViewController *tempVC = [[UIViewController alloc] init];
+tempVC.view.backgroundColor = [UIColor whiteColor];
+self.window.rootViewController = tempVC;
+
+
+UIImageView *imgView1 = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@&quot;animation1.jpg&quot;]];
+
+imgView1.frame = self.window.frame;
+[tempVC.view addSubview:imgView1];
+
+
+
+UIImageView *imgView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@&quot;animation2.jpg&quot;]];
+imgView2.frame = self.window.frame;
+imgView2.alpha = 0;
+[tempVC.view addSubview:imgView2];
+
+[UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    imgView1.alpha = 0;//简单的透明度动画
+} completion:^(BOOL finished) {
+
+}];
+
+[UIView animateWithDuration:2.0 delay:1 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    imgView2.alpha = 1;
+
+} completion:^(BOOL finished) {
+
+    [imgView2 removeFromSuperview];
+    sleep(2);
+    if ([[SendIFAPPDefault shareAppDefault].isFirstLanuch intValue] == 0) {
+
+    //动画完成后处理逻辑
+    }else{
+
+
+    }
+
+}];
+
+}</code></pre><p>这类动画别的属性就不一一举例了，以此类推。</p>
+<h4 id="转场动画"><a href="#转场动画" class="headerlink" title="转场动画"></a>转场动画</h4><p>这类动画是在切换页面时，可以加个过度效果，说到转场动画就要说到CATransition这个类了。还是先贴代码主要的属性再仔细说下。</p>
+<pre><code>CATransition *animation = [CATransition animation];
+[animation setDuration:1.25f];
+[animation setTimingFunction:[CAMediaTimingFunction
+functionWithName:kCAMediaTimingFunctionEaseIn]];
+[animation setType:kCATransitionReveal];
+[animation setSubtype: kCATransitionFromBottom];
+[self.view.layer addAnimation:animation forKey:@&quot;Reveal&quot;];</code></pre><p>需要注意的地方就是，<strong>type</strong>和<strong>subtype</strong>,因为这两个属性决定了转场的效果。先来看看这两个属性都有哪些值</p>
+<p><strong>type</strong></p>
+<pre><code>Fade = 1,                   //淡入淡出
+Push,                       //推挤
+Reveal,                     //揭开
+MoveIn,                     //覆盖
+Cube,                       //立方体
+SuckEffect,                 //吮吸
+OglFlip,                    //翻转
+RippleEffect,               //波纹
+PageCurl,                   //翻页
+PageUnCurl,                 //反翻页
+CameraIrisHollowOpen,       //开镜头
+CameraIrisHollowClose,      //关镜头
+CurlDown,                   //下翻页
+CurlUp,                     //上翻页
+FlipFromLeft,               //左翻转
+FlipFromRight,              //右翻转</code></pre><p><strong>subType</strong></p>
+<pre><code>kCATransitionFromLeft
+kCATransitionFromRight
+kCATransitionFromTop
+kCATransitionFromBottom
+kCATruncationMiddle</code></pre><p>简单的从单词来看就知道这个属性是控制效果方向的<br>最后再啰嗦一句，这个效果是作用于CALayer上的，直接添加在view上是没有任何效果的</p>
+<h4 id="CoreAnimation-核心动画"><a href="#CoreAnimation-核心动画" class="headerlink" title="CoreAnimation(核心动画)"></a>CoreAnimation(核心动画)</h4><p>如果一个效果十分复杂，前面介绍的动画实现起来困难或者实现不了，这个时候就需要用Layer动画了，既然提到Layer，这类的动画肯定是作用于layer上了。先来看看Layer都有哪些属性。如果属性都不清楚，当然效果也是做不出来的</p>
+<ul>
+<li><strong>bounds</strong> 和UIview一样，都有这个属性</li>
+<li><strong>position</strong> 默认为中点，和UIview的center一致</li>
+<li><strong>anchorPoint</strong> x,y的范围都是0到1</li>
+<li><strong>backgroundColor</strong> 这个背景颜色是CGColorRef 类型</li>
+<li><strong>transform</strong> 形变属性（2D,3D）</li>
+</ul>
+<p>如果对postion和anchorPoint 有疑惑的话可以<a href="http://kittenyang.com/anchorpoint/" target="_blank" rel="noopener">点击这里</a><br>前面的属性跟UIView差不多，就把这个<strong>transform</strong>简单的说下吧<br>动画效果包括<strong>平移，旋转和缩放</strong></p>
+<p><strong>2D效果</strong><br>这类是作用于UIview上的</p>
+<pre><code>CGAffineTransform CGAffineTransformMakeTranslation(CGFloat       tx, CGFloat ty) 
+
+CGAffineTransform CGAffineTransformMakeScale(CGFloat sx,         CGFloat sy)   
+
+CGAffineTransform CGAffineTransformMakeRotation(CGFloat          angle)</code></pre><p><strong>3D效果</strong><br>这类是作用于layer上的</p>
+<pre><code>CATransform3D CATransform3DMakeRotate (CATransform3D t,          CGFloat angle, CGFloat     x, CGFloat y, CGFloat z);//旋转
+
+CATransform3D CATransform3DMakeScale (CATransform3D t,           CGFloat sx, CGFloat sy, CGFloat sz) //缩放
+
+CATransform3D CATransform3DMakeTranslation (CGFloat tx,          CGFloat ty, CGFloat tz) //平移</code></pre><h5 id="基础动画"><a href="#基础动画" class="headerlink" title="基础动画"></a>基础动画</h5><p>CABasicAnimation是CAPropertyAnimation的子类,CAPropertyAnimation有一个字符串类型的keyPath属性.还是简单的放个例子吧</p>
+<pre><code>CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@&quot;transform&quot;];
+anim.duration = 1.5; // 动画持续1.5s
+
+// CALayer的宽度从0.5倍变为2倍
+// CALayer的高度从0.5倍变为1.5倍
+anim.fromValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5, 0.5, 1)];
+anim.toValue  = [NSValue valueWithCATransform3D:CATransform3DMakeScale(2, 1.5, 1)];
+
+[_myView.layer addAnimation:anim forKey:nil];</code></pre><p>基础动画最重要的就是指定一个keypath，因为这个keypath是个单纯的字符串，写代码时也不会提示有什么作用于动画。用的时候很不方便，这里我贴出平时逛博客记录的一些属性，算是比较全了</p>
+<pre><code>transform.scale = 缩放
+
+transform.scale.x = x轴缩放
+
+transform.scale.y = y轴上缩放
+
+transform.rotation.z = 旋转
+
+opacity = 透明度
+
+margin
+
+zPosition
+
+backgroundColor    背景颜色
+
+cornerRadius    圆角
+
+borderWidth
+
+bounds
+
+contents
+
+contentsRect
+
+cornerRadius
+
+frame
+
+hidden
+
+mask
+
+masksToBounds
+
+opacity
+
+position
+
+shadowColor
+
+shadowOffset
+
+shadowOpacity
+
+shadowRadius</code></pre><h5 id="关键帧动画"><a href="#关键帧动画" class="headerlink" title="关键帧动画"></a>关键帧动画</h5><p>所谓关键帧动画，就是给需要动画效果的属性，准备一组与时间相关的值，这些值都是在动画序列中比较关键的帧中提取出来的，而其他时间帧中的值，可以用这些关键值，采用特定的插值方法计算得到，从而达到比较流畅的动画效果。废话不啰嗦，直接贴项目中用到的一处。基于MBHUB自定义网络提示动画</p>
+<pre><code>UIView *custom = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+custom.backgroundColor = [UIColor purpleColor];
+custom.layer.cornerRadius = 10;
+custom.layer.masksToBounds = YES;
+custom.backgroundColor = [UIColor colorWithRed:231.0/255 green:215.0/255 blue:198.0/255 alpha:1.0];
+UIImageView *smallTop = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@&quot;icon_loading_02&quot;]];
+smallTop.frame = CGRectMake((custom.bounds.size.width-48)/2, 20, 48, 48);
+[custom addSubview:smallTop];
+UIImageView *bigImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@&quot;icon_loading_01&quot;]];
+bigImg.frame = CGRectMake((custom.bounds.size.width-48)/2, 20, 48, 48);
+[custom addSubview:bigImg];
+UILabel *warnLab = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(bigImg.frame), custom.bounds.size.width, 15)];
+warnLab.text = @&quot;努力加载中...&quot;;
+warnLab.textAlignment = NSTextAlignmentCenter;
+warnLab.font = [UIFont systemFontOfSize:12];
+[custom addSubview:warnLab];
+
+//圆周运动
+CGRect boundingRect = CGRectMake(-1, -1, 2, 2);
+CAKeyframeAnimation *orbit = [CAKeyframeAnimation animation];
+orbit.keyPath = @&quot;position&quot;;
+orbit.path = CFAutorelease(CGPathCreateWithEllipseInRect(boundingRect, NULL));
+orbit.duration = 4;
+orbit.additive = YES;
+orbit.repeatCount = HUGE_VALF;
+orbit.calculationMode = kCAAnimationPaced;
+orbit.rotationMode = kCAAnimationRotateAuto;
+[smallTop.layer addAnimation:orbit forKey:@&quot;oribit&quot;];
+
+
+MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication] keyWindow] animated:YES];
+hub.mode = MBProgressHUDModeCustomView;
+hub.dimBackground = NO;
+hub.color = [UIColor clearColor];
+hub.customView = custom;
+return hub;</code></pre><p>关键帧还有个很重要的属性Path,它是CGPathRef类型。配合CAShapelayer,UIBezierPath可以实现很复杂的动画，这里就不再举例了。</p>
+<h5 id="动画组"><a href="#动画组" class="headerlink" title="动画组"></a>动画组</h5><p>顾名思义，就是可以将几个或多个动画效果放在一起的类，具体使用请看下面列子<br>       //动画组<br>     CAAnimationGroup *animGroup = [CAAnimationGroup animation];</p>
+<pre><code>animGroup.animations = [NSArray arrayWithObjects:posAnim,        scaleAnim, opacityAnim, nil];
+
+animGroup.duration = 1;
+[imgView.layer addAnimation:animGroup forKey:nil];</code></pre><p>对，就是这个<strong>animations</strong>属性，是一个数组类型，将各个简单的基本的动画放在一起就可以实现一些复杂的效果。</p>
+<h4 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h4><p>再复杂的动画也都是基于上面的介绍的基本动画组成。遇到复杂的交互时，要善于去拆分，然后将基本的动画一一实现，然后再组合，就是实现了那些很炫很酷的动画效果了。</p>
+<hr>
+<h3 id="附-资源"><a href="#附-资源" class="headerlink" title="附 资源"></a>附 资源</h3><ul>
+<li><a href="https://github.com/AlfredTheBest/iOS_core_animation" target="_blank" rel="noopener">iOS动画核心技巧</a></li>
+<li><a href="https://github.com/facebook/pop" target="_blank" rel="noopener">pop</a></li>
+<li><a href="https://dribbble.com/" target="_blank" rel="noopener">国外很不错交互设计网站</a></li>
+</ul>
+<script src="/medium-image-plugin/lib.js"></script>
+      <link rel="stylesheet" href="/medium-image-plugin/lib.css">
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i>iOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/16/swiftBase/" rel="next" title="swift练习">
+                <i class="fa fa-chevron-left"></i> swift练习
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/18/datapage/" rel="prev" title="OC本地数据分页读取">
+                OC本地数据分页读取 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/4567519?s=400&u=e6c7f7845fb4e2c999ab51df004df94ba354367d&v=4" alt="monoshine">
+          <p class="site-author-name" itemprop="name">monoshine</p>
+          <p class="site-description motion-element" itemprop="description">风月无古今,情怀自深浅</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动画总结"><span class="nav-number">1.</span> <span class="nav-text">动画总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#直接使用UIView封装好的动画"><span class="nav-number">1.1.1.</span> <span class="nav-text">直接使用UIView封装好的动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转场动画"><span class="nav-number">1.1.2.</span> <span class="nav-text">转场动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CoreAnimation-核心动画"><span class="nav-number">1.1.3.</span> <span class="nav-text">CoreAnimation(核心动画)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基础动画"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">基础动画</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关键帧动画"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">关键帧动画</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#动画组"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">动画组</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最后"><span class="nav-number">1.1.4.</span> <span class="nav-text">最后</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附-资源"><span class="nav-number">1.2.</span> <span class="nav-text">附 资源</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">monoshine</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

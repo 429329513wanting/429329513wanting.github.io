@@ -1,0 +1,871 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Android,iOS,开源库,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="不积跬步无以至千里" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="记录平时开发中常用的一些Android，iOS开源库及面试的一些问题">
+<meta name="keywords" content="Android,iOS,开源库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="平时开发会用到的开源库及学习整理">
+<meta property="og:url" content="http://yoursite.com/2019/03/14/Android-常用开源库/index.html">
+<meta property="og:site_name" content="不积跬步无以至千里">
+<meta property="og:description" content="记录平时开发中常用的一些Android，iOS开源库及面试的一些问题">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/medium-image-plugin/thumbnailsundefined">
+<meta property="og:updated_time" content="2019-10-30T01:58:58.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="平时开发会用到的开源库及学习整理">
+<meta name="twitter:description" content="记录平时开发中常用的一些Android，iOS开源库及面试的一些问题">
+<meta name="twitter:image" content="http://yoursite.com/medium-image-plugin/thumbnailsundefined">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '2781135432',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/14/Android-常用开源库/">
+
+
+  <title> 平时开发会用到的开源库及学习整理 | 不积跬步无以至千里 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+    <a href="https://github.com/429329513wanting" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">不积跬步无以至千里</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">ghwang的技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tag"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                平时开发会用到的开源库及学习整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2019-03-14T10:13:43+08:00" content="2019-03-14">
+              2019-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><figure class="banner" style="width:undefinedpx; height:undefinedpx;margin: 0 auto;">
+      <img src="/medium-image-plugin/thumbnailsundefined" alt="读书" class="img-small" data-large="/imgundefined">
+      </figure><br>记录平时开发中常用的一些Android，iOS开源库及面试的一些问题</p>
+<a id="more"></a>
+<h1 id="Android开发"><a href="#Android开发" class="headerlink" title="Android开发"></a><strong>Android开发</strong></h1><h2 id="Widget"><a href="#Widget" class="headerlink" title="Widget"></a><em>Widget</em></h2><h3 id="授权登陆"><a href="#授权登陆" class="headerlink" title="授权登陆"></a><a href="https://github.com/justauth/JustAuth" target="_blank" rel="noopener">授权登陆</a></h3><h3 id="AndroidUtilCode"><a href="#AndroidUtilCode" class="headerlink" title="AndroidUtilCode"></a><a href="https://github.com/Blankj/AndroidUtilCode" target="_blank" rel="noopener">AndroidUtilCode</a></h3><p>工具类神器</p>
+<h3 id="BaseRecyclerViewAdapterHelper"><a href="#BaseRecyclerViewAdapterHelper" class="headerlink" title="BaseRecyclerViewAdapterHelper"></a><a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper" target="_blank" rel="noopener">BaseRecyclerViewAdapterHelper</a></h3><p>BRVAH是一个强大的RecyclerAdapter框架，它能节约开发者大量的开发时间，集成了大部分列表常用需求解决方案。</p>
+<h3 id="BGABanner-Android"><a href="#BGABanner-Android" class="headerlink" title="BGABanner-Android"></a><a href="https://github.com/bingoogolapple/BGABanner-Android" target="_blank" rel="noopener">BGABanner-Android</a></h3><p>引导界面滑动导航 + 大于等于1页时无限轮播 + 各种切换动画轮播效果</p>
+<h3 id="PickerView"><a href="#PickerView" class="headerlink" title="PickerView"></a><a href="https://github.com/Bigkoo/Android-PickerView" target="_blank" rel="noopener">PickerView</a></h3><p>时间选择器、省市区三级联动</p>
+<h3 id="SmartRefreshLayout"><a href="#SmartRefreshLayout" class="headerlink" title="SmartRefreshLayout"></a><a href="https://github.com/scwang90/SmartRefreshLayout" target="_blank" rel="noopener">SmartRefreshLayout</a></h3><p>下拉刷新、上拉加载、二级刷新、淘宝二楼、RefreshLayout、OverScroll，Android智能下拉刷新框架，支持越界回弹、越界拖动，具有极强的扩展性，集成了几十种炫酷的Header和 Footer。</p>
+<h3 id="Android-PickerView"><a href="#Android-PickerView" class="headerlink" title="Android-PickerView"></a><a href="https://github.com/Bigkoo/Android-PickerView" target="_blank" rel="noopener">Android-PickerView</a></h3><p>时间选择器、省市区三级联动</p>
+<h3 id="MagicIndicator"><a href="#MagicIndicator" class="headerlink" title="MagicIndicator"></a><a href="https://github.com/hackware1993/MagicIndicator" target="_blank" rel="noopener">MagicIndicator</a></h3><p>强大、可定制、易扩展的 ViewPager 指示器框架。是ViewPagerIndicator、TabLayout、PagerSlidingTabStrip的最佳替代品。支持角标，更支持在非ViewPager场景下使用（使用hide()、show()切换Fragment或使用setVisibility切换FrameLayout里的.</p>
+<h3 id="FlycoTabLayout"><a href="#FlycoTabLayout" class="headerlink" title="FlycoTabLayout"></a><a href="https://github.com/H07000223/FlycoTabLayout" target="_blank" rel="noopener">FlycoTabLayout</a></h3><p>tablayout</p>
+<h3 id="Glide"><a href="#Glide" class="headerlink" title="Glide"></a><a href="https://github.com/bumptech/glide" target="_blank" rel="noopener">Glide</a></h3><p>网络图片加载神器</p>
+<h3 id="NumberProgressBar"><a href="#NumberProgressBar" class="headerlink" title="NumberProgressBar"></a><a href="https://github.com/daimajia/NumberProgressBar" target="_blank" rel="noopener">NumberProgressBar</a></h3><p>数字进度条</p>
+<h3 id="CoordinatorTabLayout"><a href="#CoordinatorTabLayout" class="headerlink" title="CoordinatorTabLayout"></a><a href="https://github.com/hugeterry/CoordinatorTabLayout" target="_blank" rel="noopener">CoordinatorTabLayout</a></h3><p>CoordinatorTabLayout是一个自定义组合控件,可快速实现TabLayout与CoordinatorLayout相结合的样式 继承至CoordinatorLayout, 在该组件下面使用了CollapsingToolbarLayout包含TabLayout</p>
+<h3 id="MPAndroidChart"><a href="#MPAndroidChart" class="headerlink" title="MPAndroidChart"></a><a href="https://github.com/PhilJay/MPAndroidChart" target="_blank" rel="noopener">MPAndroidChart</a></h3><p>图表</p>
+<h3 id="GlideImageView"><a href="#GlideImageView" class="headerlink" title="GlideImageView"></a><a href="https://github.com/sunfusheng/GlideImageView" target="_blank" rel="noopener">GlideImageView</a></h3><p>基于Glide V4.8.0封装的图片加载库，可以监听加载图片时的进度</p>
+<h3 id="RoundedImageView"><a href="#RoundedImageView" class="headerlink" title="RoundedImageView"></a><a href="https://github.com/vinc3m1/RoundedImageView" target="_blank" rel="noopener">RoundedImageView</a></h3><p>圆角图片控件</p>
+<h3 id="Matisse"><a href="#Matisse" class="headerlink" title="Matisse"></a><a href="https://github.com/zhihu/Matisse" target="_blank" rel="noopener">Matisse</a></h3><p>知乎开源的图片选择器</p>
+<h3 id="TakePhoto"><a href="#TakePhoto" class="headerlink" title="TakePhoto"></a><a href="https://github.com/crazycodeboy/TakePhoto" target="_blank" rel="noopener">TakePhoto</a></h3><p>一款用于在Android设备上获取照片（拍照或从相册、文件中选择）、裁剪图片、压缩图片的开源工具库</p>
+<h3 id="PhotoView"><a href="#PhotoView" class="headerlink" title="PhotoView"></a><a href="https://github.com/chrisbanes/PhotoView" target="_blank" rel="noopener">PhotoView</a></h3><p>通过各种触摸手势实现支持缩放功能的ImageView</p>
+<h3 id="GSYVideoPlayer"><a href="#GSYVideoPlayer" class="headerlink" title="GSYVideoPlayer"></a><a href="https://github.com/CarGuo/GSYVideoPlayer" target="_blank" rel="noopener">GSYVideoPlayer</a></h3><p>视频播放</p>
+<h3 id="XCodeScanner"><a href="#XCodeScanner" class="headerlink" title="XCodeScanner"></a><a href="https://github.com/Simon-Leeeeeeeee/XCodeScanner" target="_blank" rel="noopener">XCodeScanner</a></h3><p>一个Android平台更快更简单更精准的条形码及二维码解析框架。采用ZBar解析图像数据，兼容Android4.0 (API14)及以上版本。<a href="https://www.jianshu.com/p/65df16604646?from=singlemessage" target="_blank" rel="noopener">教程</a></p>
+<h3 id="SmoothCheckBox"><a href="#SmoothCheckBox" class="headerlink" title="SmoothCheckBox"></a><a href="https://github.com/andyxialm/SmoothCheckBox" target="_blank" rel="noopener">SmoothCheckBox</a></h3><p>选择框</p>
+<h3 id="CameraView"><a href="#CameraView" class="headerlink" title="CameraView"></a><a href="https://github.com/CJT2325/CameraView" target="_blank" rel="noopener">CameraView</a></h3><p>仿微信拍照Android控件（轻触拍照，长按摄像）</p>
+<h3 id="MultiType"><a href="#MultiType" class="headerlink" title="MultiType"></a><a href="https://github.com/drakeet/MultiType" target="_blank" rel="noopener">MultiType</a></h3><p>MultiType 就是一个多类型列表视图的中间分发框架，它能帮助你快速并且清晰地开发一些复杂的列表页面。它本是为聊天页面开发的，聊天页面的消息类型也是有大量不同种类，并且新增频繁，而 MultiType 能够轻松胜任，代码模块化，随时可拓展新的类型进入列表当中。它内建了 类型 - View 的复用池系统，支持 RecyclerView，使用简单灵活，令代码清晰、拥抱变化。</p>
+<h3 id="Banner"><a href="#Banner" class="headerlink" title="Banner"></a><a href="https://github.com/youth5201314/banner" target="_blank" rel="noopener">Banner</a></h3><p>滚动banner</p>
+<h3 id="NiceDialog"><a href="#NiceDialog" class="headerlink" title="NiceDialog"></a><a href="https://github.com/SheHuan/NiceDialog" target="_blank" rel="noopener">NiceDialog</a></h3><p>自定义dialog</p>
+<h3 id="MarqueeView"><a href="#MarqueeView" class="headerlink" title="MarqueeView"></a><a href="https://github.com/385841539/MarqueeView" target="_blank" rel="noopener">MarqueeView</a></h3><p>-跑马灯效果</p>
+<h3 id="YSocialApi"><a href="#YSocialApi" class="headerlink" title="YSocialApi"></a><a href="https://github.com/apiosource/YSocialApi" target="_blank" rel="noopener">YSocialApi</a></h3><p>分享，支付，三方登陆</p>
+<h3 id="EnFloatingView"><a href="#EnFloatingView" class="headerlink" title="EnFloatingView"></a><a href="https://github.com/leotyndale/EnFloatingView" target="_blank" rel="noopener">EnFloatingView</a></h3><p>悬浮插件</p>
+<h3 id="AutoScrollLayout"><a href="#AutoScrollLayout" class="headerlink" title="AutoScrollLayout"></a><a href="https://github.com/leiyun1993/AutoScrollLayout" target="_blank" rel="noopener">AutoScrollLayout</a></h3><p>仿淘宝首页热点新闻滚动，类中奖滚动，自动滚动文字、View、跑马灯</p>
+<h3 id="SuperWeb"><a href="#SuperWeb" class="headerlink" title="SuperWeb"></a><a href="https://github.com/Victory-Over/SuperWeb" target="_blank" rel="noopener">SuperWeb</a></h3><p>Android基于腾讯X5内核的WebView(超级浏览器)，拥有文件上传、下载、浏览（支持PDF/PPT/DOC/EXCEL/TXT格式）、Android与JS的交互、视频播放、自定义进度条、下拉回弹等功能</p>
+<h3 id="ImagePicker"><a href="#ImagePicker" class="headerlink" title="ImagePicker"></a><a href="https://github.com/Lichenwei-Dev/ImagePicker" target="_blank" rel="noopener">ImagePicker</a></h3><p>防微信图片选择器</p>
+<h3 id="Blurry"><a href="#Blurry" class="headerlink" title="Blurry"></a><a href="https://github.com/wasabeef/Blurry" target="_blank" rel="noopener">Blurry</a></h3><p>图片模糊处理</p>
+<h3 id="XPopup"><a href="#XPopup" class="headerlink" title="XPopup"></a><a href="https://github.com/li-xiaojun/XPopup" target="_blank" rel="noopener">XPopup</a></h3><p>万能的弹框开源库</p>
+<h3 id="TagView"><a href="#TagView" class="headerlink" title="TagView"></a><a href="https://github.com/mahimrocky/TagView" target="_blank" rel="noopener">TagView</a></h3><p>编辑tags</p>
+<h3 id="KAlertDialog"><a href="#KAlertDialog" class="headerlink" title="KAlertDialog"></a><a href="https://github.com/TutorialsAndroid/KAlertDialog" target="_blank" rel="noopener">KAlertDialog</a></h3><p>sweetAlertDialog</p>
+<h3 id="GuideView"><a href="#GuideView" class="headerlink" title="GuideView"></a><a href="https://github.com/llxdaxia/GuideView" target="_blank" rel="noopener">GuideView</a></h3><p>操作帮助引导页</p>
+<h3 id="SmartRefreshLayout-1"><a href="#SmartRefreshLayout-1" class="headerlink" title="SmartRefreshLayout"></a><a href="https://github.com/scwang90/SmartRefreshLayout" target="_blank" rel="noopener">SmartRefreshLayout</a></h3><p>下拉刷新、上拉加载、二级刷新、淘宝二楼、RefreshLayout、OverScroll，Android智能下拉刷新框架，支持越界回弹、越界拖动，具有极强的扩展性，集成了几十种炫酷的Header和 Footer</p>
+<h3 id="Pickerview"><a href="#Pickerview" class="headerlink" title="Pickerview"></a><a href="https://github.com/jaaksi/pickerview" target="_blank" rel="noopener">Pickerview</a></h3><p>One very very user-friendly Picker library（内部提供两种常用类型的Picker：时间选择器（支持聚合）和联动选择器（支持不联动）。支持扩展自定义Picker。）</p>
+<h3 id="UpdatePlugin"><a href="#UpdatePlugin" class="headerlink" title="UpdatePlugin"></a><a href="https://github.com/yjfnypeu/UpdatePlugin" target="_blank" rel="noopener">UpdatePlugin</a></h3><p>可以任意定制的更新组件</p>
+<h3 id="MPAndroidChart-1"><a href="#MPAndroidChart-1" class="headerlink" title="MPAndroidChart"></a><a href="https://github.com/PhilJay/MPAndroidChart" target="_blank" rel="noopener">MPAndroidChart</a></h3><p>功能十分强大的chart库</p>
+<h3 id="SwipeRecyclerView"><a href="#SwipeRecyclerView" class="headerlink" title="SwipeRecyclerView"></a><a href="https://github.com/yanzhenjie/SwipeRecyclerView" target="_blank" rel="noopener">SwipeRecyclerView</a></h3><p>RecyclerView侧滑菜单，Item拖拽，滑动删除Item，自动加载更多，HeaderView，FooterView，Item分组黏贴。</p>
+<h3 id="Lottie"><a href="#Lottie" class="headerlink" title="Lottie"></a><a href="https://lottiefiles.com/featured" target="_blank" rel="noopener">Lottie</a></h3><p>用json文件实现复杂动画</p>
+<h3 id="aurora-imui"><a href="#aurora-imui" class="headerlink" title="aurora-imui"></a><a href="https://github.com/jpush/aurora-imui" target="_blank" rel="noopener">aurora-imui</a></h3><p>定制聊天界面</p>
+<h3 id="CameraVideoButton"><a href="#CameraVideoButton" class="headerlink" title="CameraVideoButton"></a><a href="https://github.com/iammert/CameraVideoButton" target="_blank" rel="noopener">CameraVideoButton</a></h3><p>录制视频button === only view</p>
+<h3 id="ExpandableLayout"><a href="#ExpandableLayout" class="headerlink" title="ExpandableLayout"></a><a href="https://github.com/iammert/ExpandableLayout" target="_blank" rel="noopener">ExpandableLayout</a></h3><p>Expandable LinearLayout</p>
+<h3 id="Android-skin-support"><a href="#Android-skin-support" class="headerlink" title="Android-skin-support"></a><a href="https://github.com/ximsfei/Android-skin-support" target="_blank" rel="noopener">Android-skin-support</a></h3><p>Android换肤</p>
+<h3 id="FlowLayout"><a href="#FlowLayout" class="headerlink" title="FlowLayout"></a><a href="https://github.com/nex3z/FlowLayout" target="_blank" rel="noopener">FlowLayout</a></h3><p>标签流</p>
+<h3 id="Android-TV-Libs"><a href="#Android-TV-Libs" class="headerlink" title="Android_TV_Libs"></a><a href="https://gitee.com/kumei/Android_tv_libs" target="_blank" rel="noopener">Android_TV_Libs</a></h3><p>AndroidTV 库</p>
+<h3 id="Linkage-RecyclerView"><a href="#Linkage-RecyclerView" class="headerlink" title="Linkage-RecyclerView"></a><a href="https://github.com/KunMinX/Linkage-RecyclerView" target="_blank" rel="noopener">Linkage-RecyclerView</a></h3><p>一行代码即可接入，二级联动订餐列表 - RecyclerView + AndroidX</p>
+<h3 id="SlidableLayout"><a href="#SlidableLayout" class="headerlink" title="SlidableLayout"></a><a href="https://github.com/YvesCheung/SlidableLayout" target="_blank" rel="noopener">SlidableLayout</a></h3><p>通用、易用和流畅的上下滑动翻页布局。</p>
+<h3 id="QRefreshLayout"><a href="#QRefreshLayout" class="headerlink" title="QRefreshLayout"></a><a href="https://github.com/zhangxq/QRefreshLayout" target="_blank" rel="noopener">QRefreshLayout</a></h3><p>下拉刷新，上拉加载更多，自动加载更多，用法同SwipeRefreshLayout，兼容所有view，兼容nested滚动，可以自定义header footer，支持下拉到二楼</p>
+<h3 id="SlideView"><a href="#SlideView" class="headerlink" title="SlideView"></a><a href="https://github.com/crekerliqiang/SlideView" target="_blank" rel="noopener">SlideView</a></h3><p>滑动删除</p>
+<h2 id="效率"><a href="#效率" class="headerlink" title="效率"></a><em>效率</em></h2><h3 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">EventBus</a></h3><p>事件总线</p>
+<h3 id="BaseCore"><a href="#BaseCore" class="headerlink" title="BaseCore"></a><a href="https://github.com/vivitale/BaseCore" target="_blank" rel="noopener">BaseCore</a></h3><p>小白快速开发工具库</p>
+<h3 id="Butterknife"><a href="#Butterknife" class="headerlink" title="Butterknife"></a><a href="https://github.com/JakeWharton/butterknife" target="_blank" rel="noopener">Butterknife</a></h3><p>注解神器</p>
+<h3 id="RxAndroid"><a href="#RxAndroid" class="headerlink" title="RxAndroid"></a><a href="https://github.com/ReactiveX/RxAndroid" target="_blank" rel="noopener">RxAndroid</a></h3><p>RxJava bindings for Android</p>
+<h3 id="Luban"><a href="#Luban" class="headerlink" title="Luban"></a><a href="https://github.com/Curzibn/Luban" target="_blank" rel="noopener">Luban</a></h3><p>图片压缩</p>
+<h3 id="uCrop"><a href="#uCrop" class="headerlink" title="uCrop"></a><a href="https://github.com/Yalantis/uCrop" target="_blank" rel="noopener">uCrop</a></h3><p>图片裁剪</p>
+<h3 id="RxPermissions"><a href="#RxPermissions" class="headerlink" title="RxPermissions"></a><a href="https://github.com/tbruyelle/RxPermissions" target="_blank" rel="noopener">RxPermissions</a></h3><p>基于Rx封装的权限管理</p>
+<h3 id="KLog"><a href="#KLog" class="headerlink" title="KLog"></a><a href="https://github.com/ZhaoKaiQiang/KLog" target="_blank" rel="noopener">KLog</a></h3><p>日志打印<br><a href="https://blog.csdn.net/zhaokaiqiang1992/article/details/49837627" target="_blank" rel="noopener">具体使用</a></p>
+<h3 id="Orhanobut"><a href="#Orhanobut" class="headerlink" title="Orhanobut"></a><a href="https://github.com/orhanobut/logger" target="_blank" rel="noopener">Orhanobut</a></h3><p>logger日志打印</p>
+<h3 id="Kotlin-log"><a href="#Kotlin-log" class="headerlink" title="Kotlin-log"></a><a href="https://github.com/fengzhizi715/SAF-Kotlin-log" target="_blank" rel="noopener">Kotlin-log</a></h3><p>Kotlin-日志打印库</p>
+<h3 id="baseAdapter"><a href="#baseAdapter" class="headerlink" title="baseAdapter"></a><a href="https://github.com/hongyangAndroid/baseAdapter" target="_blank" rel="noopener">baseAdapter</a></h3><p>Android 万能的Adapter for ListView,RecyclerView,GridView等，支持多种Item类型的情况。</p>
+<h3 id="EasyPay"><a href="#EasyPay" class="headerlink" title="EasyPay"></a><a href="https://github.com/kingofglory/EasyPay" target="_blank" rel="noopener">EasyPay</a></h3><p>Android平台的微信支付，支付宝支付以银联支付。封装</p>
+<h3 id="KeepLive"><a href="#KeepLive" class="headerlink" title="KeepLive"></a><a href="https://github.com/guofudong/KeepLive" target="_blank" rel="noopener">KeepLive</a></h3><p>不强杀，一直保活</p>
+<h3 id="DownloadInstaller"><a href="#DownloadInstaller" class="headerlink" title="DownloadInstaller"></a><a href="https://github.com/AnyLifeZLB/DownloadInstaller" target="_blank" rel="noopener">DownloadInstaller</a></h3><p>Android App应用内下载，储存，安装 ，未知来源等问题处理</p>
+<h3 id="FpShadowLayout"><a href="#FpShadowLayout" class="headerlink" title="FpShadowLayout"></a><a href="https://github.com/maxiaoyi/FpShadowLayout" target="_blank" rel="noopener">FpShadowLayout</a></h3><p>自定义viewGroup，给view加上阴影效果。支持单边阴影，多边阴影，圆角矩形阴影。</p>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a><em>网络</em></h2><h3 id="okhttp-OkGo"><a href="#okhttp-OkGo" class="headerlink" title="okhttp-OkGo"></a><a href="https://github.com/jeasonlzy/okhttp-OkGo" target="_blank" rel="noopener">okhttp-OkGo</a></h3><h3 id="DaemonService"><a href="#DaemonService" class="headerlink" title="DaemonService"></a><a href="https://github.com/sunfusheng/DaemonService" target="_blank" rel="noopener">DaemonService</a></h3><p>❤️跳保活 Android端心跳服务与进程保活</p>
+<h3 id="Aria"><a href="#Aria" class="headerlink" title="Aria"></a><a href="https://github.com/AriaLyy/Aria" target="_blank" rel="noopener">Aria</a></h3><p>FTP,HTTP断点续传<a href="https://aria.laoyuyu.me/aria_doc/download/ftps.html" target="_blank" rel="noopener">see</a></p>
+<h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a><em>开源</em></h2><h3 id="NiceMusic"><a href="#NiceMusic" class="headerlink" title="NiceMusic"></a><a href="https://github.com/EspoirX/NiceMusichttps://github.com/EspoirX/NiceMusic" target="_blank" rel="noopener">NiceMusic</a></h3><p>播放音频库</p>
+<h3 id="FlyTour"><a href="#FlyTour" class="headerlink" title="FlyTour"></a><a href="https://github.com/geduo83/FlyTour" target="_blank" rel="noopener">FlyTour</a></h3><p>组件化，架构 混合 </p>
+<h3 id="android-jetpack"><a href="#android-jetpack" class="headerlink" title="android-jetpack"></a><a href="https://github.com/zhiwei1990/android-jetpack-demo" target="_blank" rel="noopener">android-jetpack</a></h3><p>Android-jetpack</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a><em>数据库</em></h2><h3 id="ormlite"><a href="#ormlite" class="headerlink" title="ormlite"></a><a href="https://github.com/j256/ormlite-android" target="_blank" rel="noopener">ormlite</a></h3><h3 id="LitePal"><a href="#LitePal" class="headerlink" title="LitePal"></a><a href="https://github.com/LitePalFramework/LitePal" target="_blank" rel="noopener">LitePal</a></h3><h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a><em>动画</em></h2><h3 id="AndroidViewAnimations"><a href="#AndroidViewAnimations" class="headerlink" title="AndroidViewAnimations"></a><a href="https://github.com/daimajia/AndroidViewAnimations" target="_blank" rel="noopener">AndroidViewAnimations</a></h3><p>Android动画合集</p>
+<h3 id="ViewAnimator"><a href="#ViewAnimator" class="headerlink" title="ViewAnimator"></a><a href="https://github.com/florent37/ViewAnimator" target="_blank" rel="noopener">ViewAnimator</a></h3><p>Android动画合集</p>
+<h2 id="面试"><a href="#面试" class="headerlink" title="面试"></a><em>面试</em></h2><h3 id="面试1"><a href="#面试1" class="headerlink" title="面试1"></a><a href="https://www.jianshu.com/p/c70989bd5f29" target="_blank" rel="noopener">面试1</a></h3><h3 id="面试含部分答案"><a href="#面试含部分答案" class="headerlink" title="面试含部分答案"></a><a href="https://github.com/oo1993448102/CommonDevKnowledge" target="_blank" rel="noopener">面试含部分答案</a></h3><h3 id="面试2"><a href="#面试2" class="headerlink" title="面试2"></a><a href="https://github.com/android-exchange/Android-Interview" target="_blank" rel="noopener">面试2</a></h3><h3 id="AndroidReview"><a href="#AndroidReview" class="headerlink" title="AndroidReview"></a><a href="https://github.com/huannan/AndroidReview" target="_blank" rel="noopener">AndroidReview</a></h3><p>小楠总的 Android 面试复习</p>
+<h3 id="面试干货集中营"><a href="#面试干货集中营" class="headerlink" title="面试干货集中营"></a><a href="https://mp.weixin.qq.com/s/CQABJNacnsf8_s6l93JKUw" target="_blank" rel="noopener">面试干货集中营</a></h3><h3 id="面试最全整理"><a href="#面试最全整理" class="headerlink" title="面试最全整理"></a><a href="https://mp.weixin.qq.com/s/CQABJNacnsf8_s6l93JKUw" target="_blank" rel="noopener">面试最全整理</a></h3><h3 id="每日一道面试题"><a href="#每日一道面试题" class="headerlink" title="每日一道面试题"></a><a href="https://github.com/Moosphan/Android-Daily-Interview" target="_blank" rel="noopener">每日一道面试题</a></h3><h3 id="Java-Android学习-面试指南"><a href="#Java-Android学习-面试指南" class="headerlink" title="Java Android学习/面试指南"></a><a href="https://www.wanandroid.com/blog/show/2544" target="_blank" rel="noopener">Java Android学习/面试指南</a></h3><h3 id="2019最全面试题"><a href="#2019最全面试题" class="headerlink" title="2019最全面试题"></a><a href="https://juejin.im/post/5d2eea56f265da1b7004df0d?utm_source=gold_browser_extension" target="_blank" rel="noopener">2019最全面试题</a></h3><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a><em>其他</em></h2><h3 id="Android复习资料"><a href="#Android复习资料" class="headerlink" title="Android复习资料"></a><a href="https://juejin.im/post/5d48e9c36fb9a06af13d50f9?utm_source=gold_browser_extension" target="_blank" rel="noopener">Android复习资料</a></h3><h3 id="ScreenMatch"><a href="#ScreenMatch" class="headerlink" title="ScreenMatch"></a><a href="https://github.com/mengzhinan/ScreenMatch" target="_blank" rel="noopener">ScreenMatch</a></h3><p>Android屏幕适配方案<br><a href="https://blog.csdn.net/fesdgasdgasdg/article/details/78108169" target="_blank" rel="noopener">教程链接</a></p>
+<h3 id="Cockroach"><a href="#Cockroach" class="headerlink" title="Cockroach"></a><a href="https://github.com/android-notes/Cockroach" target="_blank" rel="noopener">Cockroach</a></h3><p>打不死的小强,永不 crash 的 Android</p>
+<h3 id="GoogleSerialPort"><a href="#GoogleSerialPort" class="headerlink" title="GoogleSerialPort"></a><a href="https://github.com/jzt-Tesla/GoogleSerialPort" target="_blank" rel="noopener">GoogleSerialPort</a></h3><ol>
+<li>串口接收和发送数据</li>
+<li><a href="https://blog.csdn.net/u010312949/article/details/80199018" target="_blank" rel="noopener">详细教程</a></li>
+</ol>
+<h3 id="Java学习-面试指南"><a href="#Java学习-面试指南" class="headerlink" title="Java学习+面试指南"></a><a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">Java学习+面试指南</a></h3><h3 id="MvRx"><a href="#MvRx" class="headerlink" title="MvRx"></a><a href="https://github.com/airbnb/MvRx/" target="_blank" rel="noopener">MvRx</a></h3><p><a href="https://blog.csdn.net/c10wtiybq1ye3/article/details/87887758" target="_blank" rel="noopener">详细教程点击这里</a></p>
+<hr>
+<hr>
+<hr>
+<hr>
+<h1 id="iOS开发"><a href="#iOS开发" class="headerlink" title="iOS开发"></a><strong>iOS开发</strong></h1><h2 id="Sica"><a href="#Sica" class="headerlink" title="Sica"></a><a href="https://github.com/cats-oss/Sica" target="_blank" rel="noopener">Sica</a></h2><p>Swift动画库</p>
+<h2 id="BRPickerView"><a href="#BRPickerView" class="headerlink" title="BRPickerView"></a><a href="https://github.com/91renb/BRPickerView" target="_blank" rel="noopener">BRPickerView</a></h2><p>iOS常用的选择器组件，只需一句代码即可调用。选择器类型主要包括：日期选择器、时间选择器、地址选择器、自定义单列字符串选择器、自定义多列字符串选择器</p>
+<h2 id="GKNavigationBarViewController"><a href="#GKNavigationBarViewController" class="headerlink" title="GKNavigationBarViewController"></a><a href="https://github.com/QuintGao/GKNavigationBarViewController" target="_blank" rel="noopener">GKNavigationBarViewController</a></h2><p>iOS自定义导航栏-导航栏联动</p>
+<h2 id="TXScrollLabelView"><a href="#TXScrollLabelView" class="headerlink" title="TXScrollLabelView"></a><a href="https://github.com/tingxins/TXScrollLabelView" target="_blank" rel="noopener">TXScrollLabelView</a></h2><p>滚动Label</p>
+<h2 id="LTScrollView"><a href="#LTScrollView" class="headerlink" title="LTScrollView"></a><a href="https://github.com/gltwy/LTScrollView" target="_blank" rel="noopener">LTScrollView</a></h2><p>嵌套scrollview</p>
+<h2 id="InjectionIII"><a href="#InjectionIII" class="headerlink" title="InjectionIII"></a><a href="https://a1049145827.github.io/2018/10/17/InjectionIII%EF%BC%9AiOS%E5%BC%80%E5%8F%91%E5%BF%85%E5%A4%87%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8-%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97/" target="_blank" rel="noopener">InjectionIII</a></h2><p>iOS开发必备效率神器-所见即所得</p>
+<h2 id="CYLTabBarController"><a href="#CYLTabBarController" class="headerlink" title="CYLTabBarController"></a><a href="https://github.com/ChenYilong/CYLTabBarController" target="_blank" rel="noopener">CYLTabBarController</a></h2><p>功能十分丰富的底部tabbar</p>
+<h2 id="XDPagesView"><a href="#XDPagesView" class="headerlink" title="XDPagesView"></a><a href="https://github.com/Xiexingda/XDPagesView" target="_blank" rel="noopener">XDPagesView</a></h2><p>可添加header的多控制器列表（类似 饿了么，美团）</p>
+<h2 id="XLForm"><a href="#XLForm" class="headerlink" title="XLForm"></a><a href="https://github.com/xmartlabs/XLForm" target="_blank" rel="noopener">XLForm</a></h2><p>表单库</p>
+<h2 id="LEEAlert"><a href="#LEEAlert" class="headerlink" title="LEEAlert"></a><a href="https://github.com/lixiang1994/LEEAlert" target="_blank" rel="noopener">LEEAlert</a></h2><p>好用自定义弹框</p>
+<h2 id="JHTapTextView"><a href="#JHTapTextView" class="headerlink" title="JHTapTextView"></a><a href="https://github.com/xjh093/JHTapTextView" target="_blank" rel="noopener">JHTapTextView</a></h2><p>文本点击</p>
+<h2 id="LoadAnimatedDemo"><a href="#LoadAnimatedDemo" class="headerlink" title="LoadAnimatedDemo"></a><a href="https://github.com/tigerAndBull/LoadAnimatedDemo-ios" target="_blank" rel="noopener">LoadAnimatedDemo</a></h2><p>骨架屏动画</p>
+<h2 id="SHSegmentedControlTableView"><a href="#SHSegmentedControlTableView" class="headerlink" title="SHSegmentedControlTableView"></a><a href="https://github.com/HatsuneMikuV/SHSegmentedControlTableView" target="_blank" rel="noopener">SHSegmentedControlTableView</a></h2><p> 类似半糖、美丽说主页与QQ音乐歌曲列表布局效果，实现不同菜单的左右滑动切换，同时支持类似tableview的顶部工具栏悬停（既可以左右滑动，又可以上下滑动）。兼容下拉刷新，上拉</p>
+<h2 id="GHDropMenuDemo"><a href="#GHDropMenuDemo" class="headerlink" title="GHDropMenuDemo"></a><a href="https://github.com/shabake/GHDropMenuDemo" target="_blank" rel="noopener">GHDropMenuDemo</a></h2><p>仿京东/美团电商筛选菜单 电商筛选菜单 电商通用筛选菜单 </p>
+<h2 id="awesome-ios"><a href="#awesome-ios" class="headerlink" title="awesome-ios"></a><a href="https://github.com/vsouza/awesome-ios" target="_blank" rel="noopener">awesome-ios</a></h2><p>ios开源库集合</p>
+<h2 id="awesome-swift"><a href="#awesome-swift" class="headerlink" title="awesome-swift"></a><a href="https://github.com/matteocrippa/awesome-swift" target="_blank" rel="noopener">awesome-swift</a></h2><p>swift开源库合集</p>
+<h2 id="SwiftLocation"><a href="#SwiftLocation" class="headerlink" title="SwiftLocation"></a><a href="https://github.com/malcommac/SwiftLocation" target="_blank" rel="noopener">SwiftLocation</a></h2><h2 id="JXCategoryView"><a href="#JXCategoryView" class="headerlink" title="JXCategoryView"></a><a href="https://github.com/pujiaxin33/JXCategoryView" target="_blank" rel="noopener">JXCategoryView</a></h2><p>所有主流APP分类切换滚动视图</p>
+<h2 id="CYLTabBarController-1"><a href="#CYLTabBarController-1" class="headerlink" title="CYLTabBarController"></a><a href="https://github.com/ChenYilong/CYLTabBarController" target="_blank" rel="noopener">CYLTabBarController</a></h2><p>中国特色 TabBar】一行代码实现 Lottie 动画TabBar，支持中间带+号的TabBar样式，自带红点角标，支持动态刷新。【iOS12 &amp; iPhone XS MAX supported】</p>
+<h2 id="TABAnimated"><a href="#TABAnimated" class="headerlink" title="TABAnimated"></a><a href="https://github.com/tigerAndBull/TABAnimated" target="_blank" rel="noopener">TABAnimated</a></h2><p>生骨架屏，网络加载过渡动画</p>
+<h2 id="CXTextView"><a href="#CXTextView" class="headerlink" title="CXTextView"></a><a href="https://github.com/caixiang305621856/CXTextView" target="_blank" rel="noopener">CXTextView</a></h2><p>评论输入框</p>
+<h2 id="XJSafeKeyboard"><a href="#XJSafeKeyboard" class="headerlink" title="XJSafeKeyboard"></a><a href="https://github.com/xjlove/XJSafeKeyboard" target="_blank" rel="noopener">XJSafeKeyboard</a></h2><p>iOS安全键盘，支持随机字母、数字、字符</p>
+<h2 id="JXPageListView"><a href="#JXPageListView" class="headerlink" title="JXPageListView"></a><a href="https://github.com/pujiaxin33/JXPageListView" target="_blank" rel="noopener">JXPageListView</a></h2><p>悬浮头横向滑动</p>
+<h2 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a><em>其他</em></h2><h3 id="面试问题-含部分答案"><a href="#面试问题-含部分答案" class="headerlink" title="面试问题-含部分答案"></a><a href="https://github.com/liberalisman/iOS-InterviewQuestion-collection" target="_blank" rel="noopener">面试问题-含部分答案</a></h3><h3 id="iOS-Study"><a href="#iOS-Study" class="headerlink" title="iOS Study"></a><a href="https://github.com/ming1016/study" target="_blank" rel="noopener">iOS Study</a></h3><h3 id="免费开源API"><a href="#免费开源API" class="headerlink" title="免费开源API"></a><a href="https://www.jianshu.com/p/e6f072839282" target="_blank" rel="noopener">免费开源API</a></h3><h3 id="DIYCode"><a href="#DIYCode" class="headerlink" title="DIYCode"></a><a href="https://www.diycode.cc/projects" target="_blank" rel="noopener">DIYCode</a></h3><h3 id="FlutterDouBan"><a href="#FlutterDouBan" class="headerlink" title="FlutterDouBan"></a><a href="https://github.com/kaina404/FlutterDouBan" target="_blank" rel="noopener">FlutterDouBan</a></h3><h3 id="一点心得iOS-Swift-React-Native-Python"><a href="#一点心得iOS-Swift-React-Native-Python" class="headerlink" title="一点心得iOS,Swift,React Native,Python"></a><a href="https://github.com/LeoMobileDeveloper/Blogs" target="_blank" rel="noopener">一点心得iOS,Swift,React Native,Python</a></h3><h3 id="2019iOS面试基础"><a href="#2019iOS面试基础" class="headerlink" title="2019iOS面试基础"></a><a href="https://juejin.im/post/5d807d425188252139764da7?utm_source=gold_browser_extension" target="_blank" rel="noopener">2019iOS面试基础</a></h3><script src="/medium-image-plugin/lib.js"></script>
+      <link rel="stylesheet" href="/medium-image-plugin/lib.css">
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i>Android</a>
+          
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i>iOS</a>
+          
+            <a href="/tags/开源库/" rel="tag"><i class="fa fa-tag"></i>开源库</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/19/OC与C-交互/" rel="next" title="OC与C++交互">
+                <i class="fa fa-chevron-left"></i> OC与C++交互
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/15/实用的技术文章总结/" rel="prev" title="实用的技术文章总结">
+                实用的技术文章总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/4567519?s=400&u=e6c7f7845fb4e2c999ab51df004df94ba354367d&v=4" alt="monoshine">
+          <p class="site-author-name" itemprop="name">monoshine</p>
+          <p class="site-description motion-element" itemprop="description">风月无古今,情怀自深浅</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Android开发"><span class="nav-number">1.</span> <span class="nav-text">Android开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Widget"><span class="nav-number">1.1.</span> <span class="nav-text">Widget</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#授权登陆"><span class="nav-number">1.1.1.</span> <span class="nav-text">授权登陆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AndroidUtilCode"><span class="nav-number">1.1.2.</span> <span class="nav-text">AndroidUtilCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BaseRecyclerViewAdapterHelper"><span class="nav-number">1.1.3.</span> <span class="nav-text">BaseRecyclerViewAdapterHelper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BGABanner-Android"><span class="nav-number">1.1.4.</span> <span class="nav-text">BGABanner-Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PickerView"><span class="nav-number">1.1.5.</span> <span class="nav-text">PickerView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SmartRefreshLayout"><span class="nav-number">1.1.6.</span> <span class="nav-text">SmartRefreshLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-PickerView"><span class="nav-number">1.1.7.</span> <span class="nav-text">Android-PickerView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MagicIndicator"><span class="nav-number">1.1.8.</span> <span class="nav-text">MagicIndicator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FlycoTabLayout"><span class="nav-number">1.1.9.</span> <span class="nav-text">FlycoTabLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Glide"><span class="nav-number">1.1.10.</span> <span class="nav-text">Glide</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NumberProgressBar"><span class="nav-number">1.1.11.</span> <span class="nav-text">NumberProgressBar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CoordinatorTabLayout"><span class="nav-number">1.1.12.</span> <span class="nav-text">CoordinatorTabLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MPAndroidChart"><span class="nav-number">1.1.13.</span> <span class="nav-text">MPAndroidChart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GlideImageView"><span class="nav-number">1.1.14.</span> <span class="nav-text">GlideImageView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RoundedImageView"><span class="nav-number">1.1.15.</span> <span class="nav-text">RoundedImageView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matisse"><span class="nav-number">1.1.16.</span> <span class="nav-text">Matisse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TakePhoto"><span class="nav-number">1.1.17.</span> <span class="nav-text">TakePhoto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PhotoView"><span class="nav-number">1.1.18.</span> <span class="nav-text">PhotoView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GSYVideoPlayer"><span class="nav-number">1.1.19.</span> <span class="nav-text">GSYVideoPlayer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XCodeScanner"><span class="nav-number">1.1.20.</span> <span class="nav-text">XCodeScanner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SmoothCheckBox"><span class="nav-number">1.1.21.</span> <span class="nav-text">SmoothCheckBox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CameraView"><span class="nav-number">1.1.22.</span> <span class="nav-text">CameraView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MultiType"><span class="nav-number">1.1.23.</span> <span class="nav-text">MultiType</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Banner"><span class="nav-number">1.1.24.</span> <span class="nav-text">Banner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NiceDialog"><span class="nav-number">1.1.25.</span> <span class="nav-text">NiceDialog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MarqueeView"><span class="nav-number">1.1.26.</span> <span class="nav-text">MarqueeView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YSocialApi"><span class="nav-number">1.1.27.</span> <span class="nav-text">YSocialApi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EnFloatingView"><span class="nav-number">1.1.28.</span> <span class="nav-text">EnFloatingView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AutoScrollLayout"><span class="nav-number">1.1.29.</span> <span class="nav-text">AutoScrollLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SuperWeb"><span class="nav-number">1.1.30.</span> <span class="nav-text">SuperWeb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ImagePicker"><span class="nav-number">1.1.31.</span> <span class="nav-text">ImagePicker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blurry"><span class="nav-number">1.1.32.</span> <span class="nav-text">Blurry</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XPopup"><span class="nav-number">1.1.33.</span> <span class="nav-text">XPopup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TagView"><span class="nav-number">1.1.34.</span> <span class="nav-text">TagView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KAlertDialog"><span class="nav-number">1.1.35.</span> <span class="nav-text">KAlertDialog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GuideView"><span class="nav-number">1.1.36.</span> <span class="nav-text">GuideView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SmartRefreshLayout-1"><span class="nav-number">1.1.37.</span> <span class="nav-text">SmartRefreshLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pickerview"><span class="nav-number">1.1.38.</span> <span class="nav-text">Pickerview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UpdatePlugin"><span class="nav-number">1.1.39.</span> <span class="nav-text">UpdatePlugin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MPAndroidChart-1"><span class="nav-number">1.1.40.</span> <span class="nav-text">MPAndroidChart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SwipeRecyclerView"><span class="nav-number">1.1.41.</span> <span class="nav-text">SwipeRecyclerView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lottie"><span class="nav-number">1.1.42.</span> <span class="nav-text">Lottie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aurora-imui"><span class="nav-number">1.1.43.</span> <span class="nav-text">aurora-imui</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CameraVideoButton"><span class="nav-number">1.1.44.</span> <span class="nav-text">CameraVideoButton</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ExpandableLayout"><span class="nav-number">1.1.45.</span> <span class="nav-text">ExpandableLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-skin-support"><span class="nav-number">1.1.46.</span> <span class="nav-text">Android-skin-support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FlowLayout"><span class="nav-number">1.1.47.</span> <span class="nav-text">FlowLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-TV-Libs"><span class="nav-number">1.1.48.</span> <span class="nav-text">Android_TV_Libs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linkage-RecyclerView"><span class="nav-number">1.1.49.</span> <span class="nav-text">Linkage-RecyclerView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SlidableLayout"><span class="nav-number">1.1.50.</span> <span class="nav-text">SlidableLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QRefreshLayout"><span class="nav-number">1.1.51.</span> <span class="nav-text">QRefreshLayout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SlideView"><span class="nav-number">1.1.52.</span> <span class="nav-text">SlideView</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效率"><span class="nav-number">1.2.</span> <span class="nav-text">效率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EventBus"><span class="nav-number">1.2.1.</span> <span class="nav-text">EventBus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BaseCore"><span class="nav-number">1.2.2.</span> <span class="nav-text">BaseCore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Butterknife"><span class="nav-number">1.2.3.</span> <span class="nav-text">Butterknife</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RxAndroid"><span class="nav-number">1.2.4.</span> <span class="nav-text">RxAndroid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Luban"><span class="nav-number">1.2.5.</span> <span class="nav-text">Luban</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uCrop"><span class="nav-number">1.2.6.</span> <span class="nav-text">uCrop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RxPermissions"><span class="nav-number">1.2.7.</span> <span class="nav-text">RxPermissions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KLog"><span class="nav-number">1.2.8.</span> <span class="nav-text">KLog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Orhanobut"><span class="nav-number">1.2.9.</span> <span class="nav-text">Orhanobut</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kotlin-log"><span class="nav-number">1.2.10.</span> <span class="nav-text">Kotlin-log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#baseAdapter"><span class="nav-number">1.2.11.</span> <span class="nav-text">baseAdapter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EasyPay"><span class="nav-number">1.2.12.</span> <span class="nav-text">EasyPay</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KeepLive"><span class="nav-number">1.2.13.</span> <span class="nav-text">KeepLive</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DownloadInstaller"><span class="nav-number">1.2.14.</span> <span class="nav-text">DownloadInstaller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FpShadowLayout"><span class="nav-number">1.2.15.</span> <span class="nav-text">FpShadowLayout</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">1.3.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#okhttp-OkGo"><span class="nav-number">1.3.1.</span> <span class="nav-text">okhttp-OkGo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DaemonService"><span class="nav-number">1.3.2.</span> <span class="nav-text">DaemonService</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Aria"><span class="nav-number">1.3.3.</span> <span class="nav-text">Aria</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开源"><span class="nav-number">1.4.</span> <span class="nav-text">开源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NiceMusic"><span class="nav-number">1.4.1.</span> <span class="nav-text">NiceMusic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FlyTour"><span class="nav-number">1.4.2.</span> <span class="nav-text">FlyTour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android-jetpack"><span class="nav-number">1.4.3.</span> <span class="nav-text">android-jetpack</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">1.5.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ormlite"><span class="nav-number">1.5.1.</span> <span class="nav-text">ormlite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LitePal"><span class="nav-number">1.5.2.</span> <span class="nav-text">LitePal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画"><span class="nav-number">1.6.</span> <span class="nav-text">动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AndroidViewAnimations"><span class="nav-number">1.6.1.</span> <span class="nav-text">AndroidViewAnimations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ViewAnimator"><span class="nav-number">1.6.2.</span> <span class="nav-text">ViewAnimator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试"><span class="nav-number">1.7.</span> <span class="nav-text">面试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面试1"><span class="nav-number">1.7.1.</span> <span class="nav-text">面试1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试含部分答案"><span class="nav-number">1.7.2.</span> <span class="nav-text">面试含部分答案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试2"><span class="nav-number">1.7.3.</span> <span class="nav-text">面试2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AndroidReview"><span class="nav-number">1.7.4.</span> <span class="nav-text">AndroidReview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试干货集中营"><span class="nav-number">1.7.5.</span> <span class="nav-text">面试干货集中营</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试最全整理"><span class="nav-number">1.7.6.</span> <span class="nav-text">面试最全整理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每日一道面试题"><span class="nav-number">1.7.7.</span> <span class="nav-text">每日一道面试题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-Android学习-面试指南"><span class="nav-number">1.7.8.</span> <span class="nav-text">Java Android学习/面试指南</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019最全面试题"><span class="nav-number">1.7.9.</span> <span class="nav-text">2019最全面试题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">1.8.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android复习资料"><span class="nav-number">1.8.1.</span> <span class="nav-text">Android复习资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ScreenMatch"><span class="nav-number">1.8.2.</span> <span class="nav-text">ScreenMatch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cockroach"><span class="nav-number">1.8.3.</span> <span class="nav-text">Cockroach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GoogleSerialPort"><span class="nav-number">1.8.4.</span> <span class="nav-text">GoogleSerialPort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java学习-面试指南"><span class="nav-number">1.8.5.</span> <span class="nav-text">Java学习+面试指南</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MvRx"><span class="nav-number">1.8.6.</span> <span class="nav-text">MvRx</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS开发"><span class="nav-number">2.</span> <span class="nav-text">iOS开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sica"><span class="nav-number">2.1.</span> <span class="nav-text">Sica</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BRPickerView"><span class="nav-number">2.2.</span> <span class="nav-text">BRPickerView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GKNavigationBarViewController"><span class="nav-number">2.3.</span> <span class="nav-text">GKNavigationBarViewController</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TXScrollLabelView"><span class="nav-number">2.4.</span> <span class="nav-text">TXScrollLabelView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LTScrollView"><span class="nav-number">2.5.</span> <span class="nav-text">LTScrollView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InjectionIII"><span class="nav-number">2.6.</span> <span class="nav-text">InjectionIII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CYLTabBarController"><span class="nav-number">2.7.</span> <span class="nav-text">CYLTabBarController</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XDPagesView"><span class="nav-number">2.8.</span> <span class="nav-text">XDPagesView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XLForm"><span class="nav-number">2.9.</span> <span class="nav-text">XLForm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LEEAlert"><span class="nav-number">2.10.</span> <span class="nav-text">LEEAlert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JHTapTextView"><span class="nav-number">2.11.</span> <span class="nav-text">JHTapTextView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LoadAnimatedDemo"><span class="nav-number">2.12.</span> <span class="nav-text">LoadAnimatedDemo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SHSegmentedControlTableView"><span class="nav-number">2.13.</span> <span class="nav-text">SHSegmentedControlTableView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GHDropMenuDemo"><span class="nav-number">2.14.</span> <span class="nav-text">GHDropMenuDemo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awesome-ios"><span class="nav-number">2.15.</span> <span class="nav-text">awesome-ios</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awesome-swift"><span class="nav-number">2.16.</span> <span class="nav-text">awesome-swift</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SwiftLocation"><span class="nav-number">2.17.</span> <span class="nav-text">SwiftLocation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JXCategoryView"><span class="nav-number">2.18.</span> <span class="nav-text">JXCategoryView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CYLTabBarController-1"><span class="nav-number">2.19.</span> <span class="nav-text">CYLTabBarController</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TABAnimated"><span class="nav-number">2.20.</span> <span class="nav-text">TABAnimated</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CXTextView"><span class="nav-number">2.21.</span> <span class="nav-text">CXTextView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XJSafeKeyboard"><span class="nav-number">2.22.</span> <span class="nav-text">XJSafeKeyboard</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JXPageListView"><span class="nav-number">2.23.</span> <span class="nav-text">JXPageListView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他-1"><span class="nav-number">2.24.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面试问题-含部分答案"><span class="nav-number">2.24.1.</span> <span class="nav-text">面试问题-含部分答案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-Study"><span class="nav-number">2.24.2.</span> <span class="nav-text">iOS Study</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#免费开源API"><span class="nav-number">2.24.3.</span> <span class="nav-text">免费开源API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DIYCode"><span class="nav-number">2.24.4.</span> <span class="nav-text">DIYCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FlutterDouBan"><span class="nav-number">2.24.5.</span> <span class="nav-text">FlutterDouBan</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一点心得iOS-Swift-React-Native-Python"><span class="nav-number">2.24.6.</span> <span class="nav-text">一点心得iOS,Swift,React Native,Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019iOS面试基础"><span class="nav-number">2.24.7.</span> <span class="nav-text">2019iOS面试基础</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">monoshine</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
